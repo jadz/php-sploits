@@ -1,0 +1,5 @@
+This sample code was used for the SydPHP February 2011 talk on website security.
+
+This code has been developed in such a way that it is vulnerable to the most basic and common website security exploits.
+
+SQL Injection / XSS / Session Hijacking are all available through this codebase.
